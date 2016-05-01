@@ -1,0 +1,184 @@
+/* --------------------------------------------------------------------------------
+*
+*   html,body
+*
+-------------------------------------------------------------------------------- */
+
+  html {
+
+    opacity: 0;
+
+    // 横スクロール
+    // max-width: 1400px;
+    // min-width: 980px;
+    
+    // baseフォント
+    @include fz(14);
+    color: $font-color;
+    font-family: $font;      
+    letter-spacing: 0em;
+    
+    // 背景
+    background-color: $bg-color;
+
+    // sp対策
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    
+    // -webkit-font-smoothing: antialiased;
+    // font-smoothing: antialiased;
+    // text-rendering: auto;
+
+  }
+
+  body {
+
+  }
+
+  @media only screen and (max-width: $maxBpSP) {
+
+    html {
+      
+      // @include fz(11);
+     
+    }
+
+  }
+
+
+/* --------------------------------------------------------------------------------
+*
+*   link
+*
+-------------------------------------------------------------------------------- */
+  
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+a:hover {
+  color: $link-colorHover;
+  text-decoration: none;
+}
+a:visited {
+  color: $link-colorVisited;
+  text-decoration: none;
+}
+a:active {
+  color: $link-colorActive;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------
+*
+*   hover
+*
+-------------------------------------------------------------------------------- */
+      
+    /*
+    *
+    *   img hovers
+    *
+    */
+    // opacity
+    .op {
+      @include transition(opacity .25s $easeOutQuad 0s);
+      
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+    // scale
+    .scale {
+      @include transition(transform .35s $easeOutQuad 0s);
+      
+      &:hover {
+        cursor: pointer;
+        @include transform(scale(1.1));
+      }
+    }
+    .scale_img {
+      @include transition(transform .3s $easeOutQuad 0s);
+      
+      &:hover {
+        cursor: pointer;
+        @include transform(scale(1.15));
+      }
+    }
+
+    /*
+    *
+    *   text hover
+    *   広がる、色が変わる(背景色と文字色)
+    */    
+    // underline
+    // .under {border-bottom: 1px solid #1c426d;}
+    // .under:hover {border-bottom: none;}
+
+    .under {
+      text-decoration: underline !important;
+      
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+    ._under {
+      text-decoration: none !important;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+    .under__red {
+      border-bottom: none;
+      
+      &:hover {
+        border-bottom: 1px solid #c30000;
+      }
+    }
+
+
+    /*
+    *
+    *   cursor
+    *
+    */
+    .cp {cursor: pointer;}
+
+    /*
+    *
+    *   linkarea
+    *
+    */
+    .linkArea:hover .link {border-bottom: 1px solid #1c426d;}
+    .linkArea img {      
+      @include transition(all .25s $easeOutQuad 0s);  
+    }
+    .linkArea:hover img {opacity: 0.5;}
+
+
+/* --------------------------------------------------------------------------------
+*
+*   title
+*
+-------------------------------------------------------------------------------- */
+
+    .tit {
+      // font-size: 15px;
+      // letter-spacing: 0.06em;
+      // line-height: 25px;
+    }
+
+/* --------------------------------------------------------------------------------
+*
+*   p
+*
+-------------------------------------------------------------------------------- */
+
+    p {
+      // line-height: 24px;
+      // letter-spacing: .1em;
+    }
+
+    p.para {}
+    p.text {}

@@ -1,0 +1,93 @@
+/* --------------------------------------------------------------------------------
+*
+*   loading
+*
+-------------------------------------------------------------------------------- */
+  
+.loading {
+  background-color: #ffd325;
+  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  
+  opacity: 0;
+  
+  #text {
+    width: 20px;
+    margin-left: -10px;
+
+    img.text {
+      display: block;
+      margin-bottom: 18px;
+      z-index: 2;
+      position: relative;
+    }
+    img.text:last-child {
+      margin-bottom: 0;
+    }
+    img.text:nth-child(2) {
+      margin-bottom: 14px;
+    }
+    img.text:nth-child(3) {
+      margin-bottom: 8px;
+      margin-left: -1px;
+    }
+    img.text:nth-child(4) {
+      margin-bottom: 15px;
+    }
+    img.text:nth-child(5) {
+      margin-bottom: 14px;
+    }
+    img.text:nth-child(6) {
+      margin-bottom: 15px;
+    }
+    img.text:nth-child(7) {
+      margin-left: -2px;
+    }
+  }
+
+  .koro {
+
+  }
+
+  .koro_o {
+    position: absolute;
+    display: block;
+  }
+  .koro_o_top {
+    z-index: 3;
+  }
+  .koro_o_btm {
+    z-index: 1;
+    margin-top: 33px;
+  }
+
+  .koro_c {
+    position: absolute;
+    display: block;
+  }
+  .koro_c_top {
+    z-index: 3;
+  }
+  .koro_c_btm {
+    z-index: 1;
+    margin-top: 37px;
+  }
+
+  .bgBox {z-index: 2;}
+  .bg {
+    background-color: #ffd325;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .dust {
+    // z-index: 5;
+    // position: relative;
+  }
+
+}
