@@ -25,5 +25,3 @@ function telCheck() {
    else isTel = false;
 
 }
-
-sss
